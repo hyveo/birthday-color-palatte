@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="생일을 채팅으로 입력하면 나만의 Birthday Color chip을 보여주는 모바일 사이트"
+    />
+    <meta name="google-analytics-id" content="G-ZHPGM632TX" />
+    <meta name="google-adsense-client" content="ca-pub-9542733830235425" />
+    <title>ColorChipGPT</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='6' width='52' height='52' rx='16' fill='%23F7FFFC'/%3E%3Crect x='6' y='6' width='52' height='52' rx='16' fill='none' stroke='%2310A37F' stroke-width='4'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-size='29' font-weight='800' fill='%2310A37F'%3EC%3C/text%3E%3Ccircle cx='48' cy='17' r='6' fill='%230068B7'/%3E%3Ccircle cx='17' cy='48' r='5' fill='%23EE7948'/%3E%3C/svg%3E"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"
+    ></script>
+  </head>
+  <body>
+    <main class="phone-shell" aria-label="ColorChipGPT chat">
+      <header class="chat-header">
+        <div class="brand-mark" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div>
+          <p class="brand-name">ColorChipGPT</p>
+          <p class="brand-status" id="roomStatus">컬러칩 대기중</p>
+        </div>
+      </header>
+
+      <section class="chat-log" id="chatLog" aria-live="polite" aria-label="대화 내용"></section>
+
+      <form class="chat-composer" id="chatForm">
+        <label class="sr-only" for="birthdayMessage">생일 입력</label>
+        <input
+          id="birthdayMessage"
+          name="birthdayMessage"
+          type="text"
+          inputmode="text"
+          autocomplete="bday"
+          placeholder="생일을 입력해주세요."
+        />
+        <button type="submit" aria-label="전송">
+          <span>↑</span>
+        </button>
+      </form>
+    </main>
+    <footer class="site-credit" aria-label="저작권">© hyveo</footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
